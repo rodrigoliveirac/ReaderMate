@@ -1,6 +1,6 @@
 package com.rodcollab.readermate.mockdatasource
 
-import com.rodcollab.readermate.core.model.ReadingEntity
+import com.rodcollab.readermate.reading.ReadingEntity
 import org.junit.After
 import org.junit.Test
 import junit.framework.TestCase

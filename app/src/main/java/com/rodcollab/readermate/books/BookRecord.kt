@@ -1,4 +1,4 @@
-package com.rodcollab.readermate.core.model
+package com.rodcollab.readermate.books
 
 /**
  * Books that the user will choose to read
