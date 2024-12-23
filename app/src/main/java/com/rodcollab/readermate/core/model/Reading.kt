@@ -1,6 +1,4 @@
-package com.rodcollab.readermate.reading
-
-import com.rodcollab.readermate.books.BookRecord
+package com.rodcollab.readermate.core.model
 
 data class Reading(
     // TODO("the id should be a Long in the future, to avoid UUID ids")

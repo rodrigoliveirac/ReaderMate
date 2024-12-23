@@ -1,4 +1,4 @@
-package com.rodcollab.readermate.books
+package com.rodcollab.readermate.core.network.model
 
 /**
  * Model related to the google books api

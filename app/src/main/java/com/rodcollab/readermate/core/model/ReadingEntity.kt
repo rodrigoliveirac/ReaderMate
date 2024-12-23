@@ -1,4 +1,4 @@
-package com.rodcollab.readermate.reading
+package com.rodcollab.readermate.core.model
 
 data class ReadingEntity(
     // the id should be a Long in the future, to avoid UUID ids
