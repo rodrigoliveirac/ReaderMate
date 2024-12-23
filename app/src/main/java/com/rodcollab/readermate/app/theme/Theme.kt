@@ -1,4 +1,4 @@
-package com.rodcollab.readermate.ui.theme
+package com.rodcollab.readermate.app.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
