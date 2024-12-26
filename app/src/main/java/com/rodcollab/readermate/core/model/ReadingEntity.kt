@@ -6,8 +6,8 @@ data class ReadingEntity(
     val bookRecordId: String,
     val goalPerDay: Int,
     val isCurrent: Boolean,
-    val startedDate: String,
-    val estimatedEndDate: String,
+    val startedDate: Long,
+    val estimatedEndDate: Long,
     val isCompleted: Boolean,
     val currentPage: Int,
 )

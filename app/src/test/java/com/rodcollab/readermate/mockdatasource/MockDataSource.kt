@@ -21,7 +21,7 @@ class MockDataSource<T> {
         source[getId(entity)] = entity
     }
 
-    fun delete(id: String) = source.remove(id)
+    fun delete(id: String) { source.remove(id) }
 
     private fun getId(entity: T): String {
         val uuidField = entity!!::class.java.getDeclaredField(UUID_FIELD)

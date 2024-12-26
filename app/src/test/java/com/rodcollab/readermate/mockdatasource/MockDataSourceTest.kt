@@ -17,8 +17,8 @@ class MockDataSourceTest {
             bookRecordId = "mock1",
             goalPerDay = 10,
             isCurrent = false,
-            startedDate = "00/00/00",
-            estimatedEndDate = "00/00/00",
+            startedDate = 0L,
+            estimatedEndDate = 0L,
             currentPage = 0,
             isCompleted = true
         )
@@ -26,8 +26,8 @@ class MockDataSourceTest {
             bookRecordId = "mock2",
             goalPerDay = 20,
             isCurrent = true,
-            startedDate = "00/00/00",
-            estimatedEndDate = "00/00/00",
+            startedDate = 0L,
+            estimatedEndDate = 0L,
             currentPage = 0,
             isCompleted = false
         )
@@ -42,22 +42,22 @@ class MockDataSourceTest {
 
     @Test
     fun `when the client create a item, the data source should have the new item`() {
-        // when
+        // Given
         val newReading = ReadingEntity(
             bookRecordId = "something2",
             goalPerDay = 10,
             isCurrent = true,
-            startedDate = "00/00/00",
-            estimatedEndDate = "00/00/00",
+            startedDate = 0L,
+            estimatedEndDate = 0L,
             currentPage = 0,
             isCompleted = true
         )
 
-        // given
+        // When
         val oldSize = readingSource.getAll().size
         readingSource.createEntity(newReading)
 
-        // then
+        // Then
         val newList = readingSource.getAll()
         val newSize = newList.size
 
@@ -66,13 +66,13 @@ class MockDataSourceTest {
 
     @Test
     fun `when the client get a item, the data source should return the respective item`() {
-        // when
+        // Given
         val newReading1 = ReadingEntity(
             bookRecordId = "something2",
             goalPerDay = 10,
             isCurrent = false,
-            startedDate = "00/00/00",
-            estimatedEndDate = "00/00/00",
+            startedDate = 0L,
+            estimatedEndDate = 0L,
             currentPage = 0,
             isCompleted = true
         )
@@ -80,18 +80,18 @@ class MockDataSourceTest {
             bookRecordId = "something3",
             goalPerDay = 20,
             isCurrent = true,
-            startedDate = "00/00/00",
-            estimatedEndDate = "00/00/00",
+            startedDate = 0L,
+            estimatedEndDate = 0L,
             currentPage = 0,
             isCompleted = false
         )
         readingSource.createEntity(newReading1)
         readingSource.createEntity(newReading2)
 
-        // given
+        // When
         val selectedItem = readingSource.getAll().random()
 
-        // then
+        // Then
         val getReading = readingSource.readyById(selectedItem.uuid)
 
 
@@ -100,15 +100,15 @@ class MockDataSourceTest {
 
     @Test
     fun `when the client get a item and change the currentPage, the data source should update the list`() {
-        // when
+        // Given
         val reading = readingSource.getAll()
         val selectReading = reading.random()
 
-        // given
+        // When
         val newReading = selectReading.copy(currentPage = selectReading.currentPage + 10)
         readingSource.update(newReading)
 
-        // then
+        // Then
         val oldReading = selectReading
         val readingUpdated = readingSource.readyById(selectReading.uuid)
 
@@ -118,14 +118,14 @@ class MockDataSourceTest {
 
     @Test
     fun `when the client remove a reading, the data source should update the list without the reading`() {
-        // when
+        // Given
         val reading = readingSource.getAll()
 
-        // given
+        // When
         val selectReading = reading.random()
         readingSource.delete(selectReading.uuid)
 
-        // then
+        // Then
         val getReadingDeleted = readingSource.readyById(selectReading.uuid)
 
         TestCase.assertNull(getReadingDeleted)
