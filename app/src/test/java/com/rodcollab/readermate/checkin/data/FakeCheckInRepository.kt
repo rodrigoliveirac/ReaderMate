@@ -1,4 +1,4 @@
-package com.rodcollab.readermate.checkin
+package com.rodcollab.readermate.checkin.data
 
 import com.rodcollab.readermate.core.common.DateUtils.toLocalDate
 import com.rodcollab.readermate.core.model.CheckIn
@@ -58,4 +58,5 @@ class FakeCheckInRepository(private val dao: MockDataSource<CheckInEntity>) : Ch
     override suspend fun removeAll() {
         dao.removeAll()
     }
+
 }
