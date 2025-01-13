@@ -6,7 +6,7 @@ import com.rodcollab.readermate.core.local.DATABASE_NAME
 import com.rodcollab.readermate.core.local.ReaderMateDao
 import org.koin.dsl.module
 
-val appModule = module {
+val roomModule = module {
     single { this }
 
     single {

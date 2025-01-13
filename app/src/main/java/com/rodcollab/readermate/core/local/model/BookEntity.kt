@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
  * Books that the user will choose to read
  */
 @Entity
-data class BookRecordEntity(
+data class BookEntity(
     // TODO("the id should be a Long in the future, to avoid UUID ids")
     @PrimaryKey val uuid: String,
     @ColumnInfo("title") val title: String,
