@@ -18,7 +18,7 @@ class MockDataSourceTest {
             goalPerDay = 10,
             isCurrent = false,
             startedDate = 0L,
-            estimatedEndDate = 0L,
+            estimatedEndInNumberOfSessions = 0,
             currentPage = 0,
             isCompleted = true
         )
@@ -27,7 +27,7 @@ class MockDataSourceTest {
             goalPerDay = 20,
             isCurrent = true,
             startedDate = 0L,
-            estimatedEndDate = 0L,
+            estimatedEndInNumberOfSessions = 0,
             currentPage = 0,
             isCompleted = false
         )
@@ -48,7 +48,7 @@ class MockDataSourceTest {
             goalPerDay = 10,
             isCurrent = true,
             startedDate = 0L,
-            estimatedEndDate = 0L,
+            estimatedEndInNumberOfSessions = 0,
             currentPage = 0,
             isCompleted = true
         )
@@ -72,7 +72,7 @@ class MockDataSourceTest {
             goalPerDay = 10,
             isCurrent = false,
             startedDate = 0L,
-            estimatedEndDate = 0L,
+            estimatedEndInNumberOfSessions = 0,
             currentPage = 0,
             isCompleted = true
         )
@@ -81,7 +81,7 @@ class MockDataSourceTest {
             goalPerDay = 20,
             isCurrent = true,
             startedDate = 0L,
-            estimatedEndDate = 0L,
+            estimatedEndInNumberOfSessions = 0,
             currentPage = 0,
             isCompleted = false
         )

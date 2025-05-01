@@ -58,12 +58,12 @@ class CheckInRepositoryTest {
         setupCheckInsMock(withTodayCheckIn = true)
 
         // when
-        val todayCheckIn = checkInRepository.getTodayCheckIn()
+        val todayCheckIn = checkInRepository.getTodayCheckIn()!!
         val checkInUpdated = todayCheckIn.copy(totalPages = todayCheckIn.totalPages + 5, goalAchieved = true)
         checkInRepository.updateCheckIn(checkInUpdated)
 
         // then
-        val todayCheckInUpdated = checkInRepository.getTodayCheckIn()
+        val todayCheckInUpdated = checkInRepository.getTodayCheckIn()!!
 
         TestCase.assertEquals(true, todayCheckInUpdated.goalAchieved)
         TestCase.assertEquals(15, todayCheckInUpdated.totalPages)
@@ -76,7 +76,7 @@ class CheckInRepositoryTest {
 
         // when
         val today = LocalDate.now()
-        val todayCheckIn = checkInRepository.getTodayCheckIn()
+        val todayCheckIn = checkInRepository.getTodayCheckIn()!!
 
         // then
 

@@ -6,7 +6,7 @@ fun ReadingEntity.toReading() = Reading(
     goalPerDay = goalPerDay,
     isCurrent = isCurrent,
     startedDate = startedDate,
-    estimatedEndDate = estimatedEndDate,
+    numberOfSessionsLeft = estimatedEndInNumberOfSessions,
     isCompleted = isCompleted,
     currentPage = currentPage
 )
@@ -17,7 +17,7 @@ fun Reading.toReadingEntity() = ReadingEntity(
     goalPerDay = goalPerDay,
     isCurrent = isCurrent,
     startedDate = startedDate,
-    estimatedEndDate = estimatedEndDate,
+    estimatedEndInNumberOfSessions = numberOfSessionsLeft,
     isCompleted = isCompleted,
     currentPage = currentPage
 )
@@ -36,4 +36,20 @@ fun CheckIn.toCheckInEntity() = CheckInEntity(
     totalPages = totalPages,
     createdAt = createdAt,
     goalAchieved = goalAchieved
+)
+
+fun BookEntity.toBookRecord() = BookRecord(
+    uuid = uuid,
+    title = title,
+    author = author,
+    description = description,
+    totalPages = totalPages,
+)
+
+fun BookRecord.toBookEntity() = BookEntity(
+    uuid = uuid,
+    title = title,
+    author = author,
+    description = description,
+    totalPages = totalPages,
 )

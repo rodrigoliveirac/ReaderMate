@@ -19,4 +19,5 @@ object DateUtils {
         val zoneId = ZoneId.systemDefault()
         return instant.atZone(zoneId).toLocalDate()
     }
+    fun LocalDate.toDateText(): String = "${this.dayOfMonth}/${this.month}/${this.year}"
 }

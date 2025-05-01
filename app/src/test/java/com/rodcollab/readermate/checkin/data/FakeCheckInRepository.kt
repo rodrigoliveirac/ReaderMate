@@ -48,11 +48,11 @@ class FakeCheckInRepository(private val dao: MockDataSource<CheckInEntity>) : Ch
         }
     }
 
-    override suspend fun getTodayCheckIn(): CheckIn {
+    override suspend fun getTodayCheckIn(): CheckIn? {
         val today = LocalDate.now()
         return dao.getAll().find {
             it.createdAt.toLocalDate() == today
-        }?.toCheckIn()!!
+        }?.toCheckIn()
     }
 
     override suspend fun removeAll() {

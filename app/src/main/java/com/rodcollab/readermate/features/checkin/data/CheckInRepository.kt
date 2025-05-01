@@ -8,6 +8,6 @@ interface CheckInRepository {
     suspend fun updateCheckIn(checkIn: CheckIn)
     suspend fun getCurrentWeekCheckIns(): List<CheckIn>
     suspend fun hasCheckInToday(): Boolean
-    suspend fun getTodayCheckIn(): CheckIn
+    suspend fun getTodayCheckIn(): CheckIn?
     suspend fun removeAll()
 }

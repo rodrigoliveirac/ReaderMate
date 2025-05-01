@@ -29,7 +29,7 @@ class ReadingRepositoryTest {
             goalPerDay = 10,
             isCurrent = true,
             startedDate = System.currentTimeMillis(),
-            estimatedEndDate = System.currentTimeMillis() + 1000L,
+            numberOfSessionsLeft = 0,
             currentPage = 0,
             isCompleted = false
         )
@@ -97,7 +97,7 @@ class ReadingRepositoryTest {
             goalPerDay = 10,
             isCurrent = false,
             startedDate = System.currentTimeMillis() - 20000L,
-            estimatedEndDate = System.currentTimeMillis() + 1000L,
+            numberOfSessionsLeft = 0,
             currentPage = 0,
             isCompleted = true
         )
@@ -106,7 +106,7 @@ class ReadingRepositoryTest {
             goalPerDay = 10,
             isCurrent = false,
             startedDate = System.currentTimeMillis() - 10000L,
-            estimatedEndDate = System.currentTimeMillis() + 1000L,
+            numberOfSessionsLeft = 0,
             currentPage = 400,
             isCompleted = true
         )
@@ -117,7 +117,7 @@ class ReadingRepositoryTest {
                 goalPerDay = 10,
                 isCurrent = true,
                 startedDate = System.currentTimeMillis(),
-                estimatedEndDate = System.currentTimeMillis() + 1000L,
+                numberOfSessionsLeft = 0,
                 currentPage = 400,
                 isCompleted = false
             )
